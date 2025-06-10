@@ -4,8 +4,9 @@
 
 import telebot
 
-# Вставь сюда свой токен от BotFather
-token = '7796793440:AAGpjEwv4_jrCqVq1_74WWjDUUOEFvMtSgs'
+# Загружаем токен из файла
+with open("token.txt", "r") as file:
+    token = file.read().strip()
 
 # Создаём объект бота
 bot = telebot.TeleBot(token)
